@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "a2e0c228-ed5e-428e-9ab8-32ee2350a377",
+		"name": "Projeto Decoder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "EAD-AUTH-USER HTTP",
+			"item": [
+				{
+					"name": "AUTH",
+					"item": [
+						{
+							"name": "SIGN UP",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"michellibrito\",\r\n    \"email\": \"contato@michellibrito\",\r\n    \"password\": \"123456\",\r\n    \"fullName\": \"Michelli Brito\",\r\n    \"phoneNumber\": \"312121212\",\r\n    \"cpf\": \"123323232\",\r\n    \"imageUrl\": \"teste\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8087/auth/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "USER",
+					"item": [
+						{
+							"name": "GET ALL USERS",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8087/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET ONE USER",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8087/users/b8d00943-abd0-4007-a956-1491a02b1f54",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"users",
+										"b8d00943-abd0-4007-a956-1491a02b1f54"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE USER",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8087/users/c06114ff-ae45-40a3-afda-4e52868ad6e1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"users",
+										"c06114ff-ae45-40a3-afda-4e52868ad6e1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT  PASSWORD",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\": \"1234565678\",\r\n    \"oldPassword\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8087/users/b8d00943-abd0-4007-a956-1491a02b1f54/password",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"users",
+										"b8d00943-abd0-4007-a956-1491a02b1f54",
+										"password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT  IMAGE",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"imageUrl\": \"teste-image-validated\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8087/users/b8d00943-abd0-4007-a956-1491a02b1f54/image",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"users",
+										"b8d00943-abd0-4007-a956-1491a02b1f54",
+										"image"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UPDATE USER",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fullName\": \"Michelli Brito Teste\",\r\n    \"phoneNumber\": \"312121212\",\r\n    \"cpf\": \"123323232\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8087/users/b8d00943-abd0-4007-a956-1491a02b1f54",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"users",
+										"b8d00943-abd0-4007-a956-1491a02b1f54"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
