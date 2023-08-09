@@ -17,7 +17,7 @@ import java.util.UUID;
 @Log4j2
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
-public class UserCoursesController {
+public class UserCourseController {
 
     @Autowired
     UserClient userClient;
