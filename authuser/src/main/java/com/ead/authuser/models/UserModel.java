@@ -9,7 +9,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import org.springframework.hateoas.RepresentationModel;
 
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -67,5 +66,9 @@ public class UserModel extends RepresentationModel<UserModel> implements Seriali
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private Set<UserCourseModel> userCourses;
+
+    public UserCourseModel convertToUserCourseModel(UUID courseId) {
+        return new UserCourseModel(null, courseId, this);
+    }
 
 }
